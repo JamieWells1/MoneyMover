@@ -1,0 +1,586 @@
+/*--------------------------- Whole page ---------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+}
+
+element {
+  --brand-color: rgb(69, 131, 211);
+}
+
+.full-page {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.br-standard {
+  border-radius: 15px;
+}
+
+/*--------------------------- Sidebar Desktop ---------------------------*/
+
+.logo {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  background-color: rgb(255, 255, 255);
+}
+
+.sidebar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+li > .material-symbols-outlined {
+  padding-right: 10px;
+}
+
+nav > ul > li {
+  width: 165px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 120%;
+  padding: 12px;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+nav > ul > li:hover {
+  background-color: rgb(235, 235, 235);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+nav > ul > li.active {
+  background-color: rgb(69, 131, 211);
+  color: white;
+  box-shadow: 10px 10px 20px rgb(182, 182, 182);
+  transition: 0.6s ease-in-out;
+}
+
+nav > ul > li.active:hover {
+  transform: translateY(-10px);
+  transition: 0.6s;
+}
+
+.desktop-sidebar {
+  display: block;
+}
+
+/*--------------------------- Sidebar Mobile ---------------------------*/
+
+#mobile-sidebar {
+  display: none;
+}
+
+.logo-mobile {
+  height: 30px;
+  width: 30px;
+  margin-left: 20%;
+  margin-top: 10px;
+}
+
+.mobile-icons {
+  padding: 0;
+}
+
+#mobile-sidebar > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#mobile-sidebar > nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#mobile-sidebar > nav > ul {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+#mobile-sidebar > nav > ul > li {
+  width: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 120%;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#mobile-sidebar > nav > ul > li:hover {
+  background-color: rgb(235, 235, 235);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#mobile-sidebar > nav > ul > li.active {
+  background-color: rgb(69, 131, 211);
+  color: white;
+}
+
+/*--------------------------- Balance Display ---------------------------*/
+
+.balance-display {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.bank-balance > p,
+.cash-balance > p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bank-balance {
+  margin-bottom: 25px;
+}
+
+.bank-balance,
+.cash-balance {
+  background-color: rgb(240, 240, 240);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgb(197, 197, 197);
+  transition: 0.5s ease;
+}
+
+.bank-balance:hover,
+.cash-balance:hover {
+  transform: translateY(-5px);
+  transition: 0.5s ease;
+}
+
+.bank-balance > h3,
+.cash-balance > h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.bank-balance > p {
+  color: rgb(69, 131, 211);
+}
+
+.cash-balance > p {
+  color: rgb(47, 199, 41);
+}
+
+/*--------------------------- Dashboard Tab ---------------------------*/
+
+#dashboard > div {
+  background-color: rgb(243, 243, 243);
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  gap: 15px;
+  grid-template-rows: 7% 41% 41%;
+  border-left: 2px rgb(202, 202, 202) solid;
+  place-content: center;
+}
+
+#dashboard > div > * {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px rgb(194, 194, 194);
+}
+
+#dashboard > div > h1 {
+  grid-column: span 3;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
+  transition: none;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#toggle-mode {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 40px;
+  box-shadow: none;
+}
+
+#dashboard > div > h1:hover {
+  transform: none;
+}
+
+.chart {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#growth-chart {
+  position: relative;
+  top: 15%;
+}
+
+#balance-graph-description > *,
+#growth-graph-description > * {
+  position: relative;
+  top: 20px;
+  left: 25px;
+  width: 85%;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+#balance-graph-description > h3,
+#growth-graph-description > h3 {
+  font-weight: 600;
+}
+
+#balance-graph-description > p,
+#growth-graph-description > p {
+  font-size: 16px;
+}
+
+.dashboard-button {
+  height: 50px;
+  margin-top: 10px;
+  background-color: rgb(69, 131, 211);
+  border: 0px transparent solid;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgb(182, 182, 182);
+  transition: 0.5s;
+}
+
+.dashboard-button:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: rgb(33, 94, 145);
+}
+
+.dashboard-button > p {
+  margin-top: 4%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.transactions-empty > span {
+  font-size: 75px;
+  color: gray;
+  margin-left: 45%;
+}
+
+.transactions-empty > h2 {
+  font-weight: 500;
+  color: gray;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#by-transfer-chart {
+  margin: auto;
+}
+
+/* Pie chart section */
+
+#no-data-pie {
+  display: block;
+  text-align: center;
+  color: gray;
+  margin-top: 15%;
+}
+
+#no-data-pie > h2 {
+  margin-bottom: 8%;
+  font-weight: 500;
+}
+
+#no-data-pie > span {
+  font-size: 60px;
+}
+
+/*--------------------------- Payments Tab ---------------------------*/
+
+#payments > .container {
+  background-color: rgb(232, 244, 245);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-left: 2px rgb(202, 202, 202) solid;
+  overflow-y: auto;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 60%;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 30px 30px 30px rgb(194, 194, 194);
+  transition: transform 0.5s ease;
+}
+
+.payment-option h2,
+.payment-option span {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.payment-option h2 {
+  font-size: 180%;
+  font-weight: 600;
+}
+
+.payment-option span {
+  font-size: 350%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 25px;
+  color: white;
+}
+
+.payment-option.receive > div > span {
+  background-color: rgb(69, 131, 211);
+}
+
+.payment-option.send > div > span {
+  background-color: rgb(69, 131, 211);
+}
+
+.payment-option:hover {
+  cursor: pointer;
+  transform: translateY(-20px);
+  transition: 0.5s;
+}
+
+#payments > * > h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 100%;
+}
+
+/*--------------------------- Cash Tab ---------------------------*/
+
+#cash {
+  background-color: rgb(219, 241, 215);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-left: 2px rgb(202, 202, 202) solid;
+}
+
+#cash > div {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  height: 60%;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.233);
+  transition: transform 0.5s ease;
+}
+
+.payment-option.deposit > div > span {
+  background-color: rgb(47, 199, 41);
+}
+
+.payment-option.withdraw > div > span {
+  background-color: rgb(47, 199, 41);
+}
+
+#cash > div:hover {
+  cursor: pointer;
+  transform: translateY(-20px);
+  transition: 0.5s;
+}
+
+.account-flex {
+  margin-top: 10%;
+}
+
+.account-flex > h3 {
+  font-size: 180%;
+  font-weight: 500;
+}
+
+.account-flex > span {
+  padding-top: 20px;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+#main-account > div > * {
+  color: rgb(69, 131, 211);
+}
+
+#savings-account > div > * {
+  color: rgb(46, 173, 29);
+}
+
+.accountTotal {
+  padding-top: 6%;
+  font-size: 140%;
+  font-weight: 600;
+}
+
+#create-account {
+  order: 6;
+}
+
+#create-account > div > * {
+  color: rgb(145, 145, 145);
+}
+
+#create-account > div > span {
+  font-size: 3rem;
+}
+
+/*--------------------------- Transfer Log Tab ---------------------------*/
+
+#transfer-log {
+  background-color: rgb(232, 244, 245);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  grid-template-rows: 15% 20% 40% 20%;
+  border-left: 2px rgb(202, 202, 202) solid;
+}
+
+#transfer-log > * {
+  background-color: aquamarine;
+}
+
+#transfer-log > h1 {
+  grid-column: span 3;
+}
+
+.chart-test {
+  grid-row: span 2;
+}
+
+/*--------------------------- Now let's add some responsiveness ---------------------------*/
+
+@media screen and (max-width: 1000px) {
+  #payments > .container {
+    grid-template-columns: 80%;
+    align-items: center;
+    grid-template-rows: 1fr 1fr; /* Change this line to evenly distribute the .payment-option elements */
+    gap: 0;
+  }
+
+  .payment-option {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Add this line to horizontally center the content */
+    align-items: center; /* Add this line to vertically center the content */
+    margin-left: 50px;
+  }
+  .full-page {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .display-block > h2 {
+    font-size: 22px;
+  }
+
+  .display-block > span {
+    font-size: 250%;
+    width: 80px;
+    height: 80px;
+  }
+
+  #payments > .container {
+    grid-template-columns: 80%;
+    align-items: center;
+    grid-template-rows: 1fr 1fr; /* Change this line to evenly distribute the .payment-option elements */
+    gap: 0;
+  }
+
+  #cash > div {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center; /* Add this line to horizontally center the content */
+    align-items: center; /* Add this line to vertically center the content */
+    margin-left: 50px;
+  }
+
+  #cash {
+    grid-template-columns: 80%;
+    align-items: center;
+    grid-template-rows: 1fr 1fr; /* Change this line to evenly distribute the .payment-option elements */
+    gap: 0;
+  }
+
+  .display-block > h2 {
+    font-size: 22px;
+  }
+
+  .display-block > span {
+    font-size: 250%;
+    width: 80px;
+    height: 80px;
+  }
+
+  #desktop-sidebar {
+    display: none;
+  }
+
+  #mobile-sidebar {
+    display: block;
+  }
+}

@@ -1,0 +1,159 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(230, 230, 230);
+}
+
+.back-arrow {
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -25px;
+  color: #333;
+}
+
+.container {
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  justify-content: center;
+  margin-top: 8%;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px 10px rgb(204, 204, 204);
+}
+
+.payments-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+.payments-form > * {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.payments-form > h2 {
+  font-size: 25px;
+}
+
+.payments-form > input {
+  margin-bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0px transparent solid;
+  background-color: rgb(219, 219, 219);
+  font-size: 16px;
+}
+
+.payments-form > button {
+  width: 180px;
+  padding: 10px;
+  margin-top: -10px;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(82, 170, 243);
+  font-size: 16px;
+  color: white;
+  box-shadow: 5px 5px 15px rgb(156, 156, 156);
+  transition: 0.5s ease;
+}
+
+.payments-form > button:hover {
+  background-color: rgb(51, 126, 187);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 15px 15px 25px rgb(156, 156, 156);
+  transform: translateY(-5px);
+}
+
+/* ---------------------------- Now let's do some responsiveness ---------------------------- */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 60vw;
+  }
+}
+
+/* ---------------------------- Transaction success screen ---------------------------- */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#fillout-true {
+  margin-top: 10%;
+}
+
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.transaction-details {
+  margin: 20px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    display: block;
+    width: 300px;
+    margin: auto;
+  }
+}

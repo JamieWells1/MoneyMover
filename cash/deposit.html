@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Deposit Cash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="cash.css" />
+  </head>
+  <body>
+    <div class="content" id="fillout-false">
+      <form id="deposit-form">
+        <h2>Choose a name for your transaction:</h2>
+        <input type="text" name="transactionName" id="name-deposit" required/>
+        <h2>Choose an amount for your transaction:</h2>
+        <input type="number" name="transactionAmount" id="amount-deposit" required/>
+        <button type="submit">Deposit</button>
+      </form>
+    </div>
+    <div id="fillout-true">
+      <h1>Transaction Successful!</h1>
+        <p>Thank you for using MoneyMover.</p>
+        <div class="transaction-details">
+            <p id="amount-transferred">Amount Transferred: $100</p>
+            <p id="transaction-name">Transaction Name: Pretend Transaction</p>
+        </div>
+        <div class="button-container">
+            <a href="#" class="button">Complete Another Transaction</a>
+            <a href="#" class="button">Return to Home Screen</a>
+        </div>
+    </div>
+    <script src="deposit.js"></script>
+    <script src="/countdown.js"></script>
+  </body>
+</html>
